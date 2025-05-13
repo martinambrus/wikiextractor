@@ -412,7 +412,6 @@ def process_dump(input_file, template_file, out_file, file_size, file_compress,
     # - pages to be processed are dispatched to workers
     # - a reduce process collects the results, sort them and print them.
 
-    # fixes MacOS error: TypeError: cannot pickle '_io.TextIOWrapper' object
     Process = get_context("fork").Process
 
     maxsize = 10 * process_count
